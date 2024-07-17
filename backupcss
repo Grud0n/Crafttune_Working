@@ -1,0 +1,347 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #333;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+}
+
+#add-box-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*
+.portal-switch {
+  margin-right: 20px;
+}
+
+.portal-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.portal-button.active {
+  color: #007BFF; 
+}
+
+.portal-button:hover {
+  color: #555;
+}
+*/
+
+/* Stil für den Toggle-Schalter */
+.toggle-switch {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+}
+
+.toggle-switch-label:before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  top: 4px;
+  left: 4px;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked + .toggle-switch-label {
+  background-color: #2196F3; /* Blaue Farbe für Geschäftskunden */
+}
+
+.toggle-switch input:checked + .toggle-switch-label:before {
+  transform: translateX(26px);
+}
+
+.toggle-switch-label:after {
+  content: 'Privat'; /* Standardwert */
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-switch input:checked + .toggle-switch-label:after {
+  content: 'Geschäft'; /* Angezeigt, wenn auf Geschäftskunden umgeschaltet wird */
+}
+
+
+main.craftsman-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  
+}
+
+.craftsman-boxes {
+  display: inline-block;
+}
+
+#craftsman-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Abstand zwischen den Boxen */
+}
+
+.craftsman-category {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.craftsman-box {
+  width: calc(50% - 20px); /* 50% der Breite minus Margin */
+  transition: box-shadow .3s;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.craftsman-box a:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.craftsman-box img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+.craftsman-box h3, .craftsman-box p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: #fff;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.popup input,
+.popup select {
+  width: calc(100% - 30px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.popup button {
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.popup button#closePopup {
+  background: #ddd;
+  color: #333;
+}
+
+.faq-section {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.faq-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-answer {
+  padding: 15px;
+  display: none;
+}
+
+.faq-question:focus {
+  outline: none;
+}
+
+.faq-question:hover {
+  background-color: #f5f5f5;
+}
+
+.faq-question.active {
+  background-color: #f5f5f5;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+
+iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

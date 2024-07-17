@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
+  <title>CraftTune</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8036493329313069"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="CraftTune Logo">
+        <h1>CraftTune</h1>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Startseite</a>
+        <a href="about-us.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <div class="toggle-switch">
+        <input type="checkbox" id="customer-toggle">
+        <label class="toggle-switch-label" for="customer-toggle"></label>
+      </div>
+      <button id="add-box-button">Firma anlegen</button>
+    
+    <div class="dropdown">
+      <button class="dropbtn">&#9660; Kategorien</button>
+      <div class="dropdown-content">
+        <a href="#" data-category="schreiner">Schreiner</a>
+        <a href="#" data-category="elektriker">Elektriker</a>
+        <a href="#" data-category="klempner">Klempner</a>
+        <a href="#" data-category="Test Kategorie">Test Kategorie</a>
+        <!-- Weitere Kategorien hier -->
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <main class="craftsman-boxes" id="craftsman-box-container">
+    <!-- Hier werden die Boxen dynamisch hinzugefügt -->
+    <!-- Hier beispielhaft eingefügte Datensaetze -->
+  </main>
+
+  <div class="overlay" id="overlay">
+    <div class="popup">
+      <h2>Firmendaten eingeben</h2>
+      <label for="companyName">Firmenname:</label>
+      <input type="text" id="companyName" required>
+      <label for="location">Standort:</label>
+      <input type="text" id="location" required>
+      <label for="category">Kategorie:</label>
+      <select id="category">
+        <option value="schreiner">Schreiner</option>
+        <option value="elektriker">Elektriker</option>
+        <option value="klempner">Klempner</option>
+        <option value="Test Kategorie">Klempner</option>
+        <!-- Weitere Kategorien hier -->
+      </select>
+      <label for="shortDescription">Kurzbeschreibung:</label>
+      <textarea id="shortDescription" rows="4"></textarea>
+      <button id="submitData">Daten speichern</button>
+      <button id="closePopup">Abbrechen</button>
+    </div>
+  </div>
+
+<section class="faq-section">
+  <h2>Häufig gestellte Fragen</h2>
+  <div class="faq-item">
+    <h3>Wie füge ich eine neue Firma hinzu?</h3>
+    <p>Um eine neue Firma hinzuzufügen, klicken Sie einfach auf den "Firma anlegen" Button oben rechts auf der Seite und geben Sie die erforderlichen Informationen ein.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Wie kann ich nach Handwerkern suchen?</h3>
+    <p>Sie können nach Handwerkern suchen, indem Sie entweder eine Kategorie im Dropdown-Menü auswählen oder den Suchbegriff in das Suchfeld eingeben und auf die Suchschaltfläche klicken.</p>
+  </div>
+  <!-- Weitere FAQ-Einträge hier -->
+</section>
+  
+  <iframe src="https://www.google.com/maps/d/embed?mid=1mznQIC2SCHjfI3aLkiuPVWHyx6Av4U4&ehbc=2E312F" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  <footer>
+    <p>&copy; 2024 CraftTune. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
