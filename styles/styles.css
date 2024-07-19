@@ -345,3 +345,105 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+
+/* Login-Page */
+
+.login-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.toggle-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+  background-color: #ddd;
+  border-radius: 17.5px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.toggle-text {
+  width: 50%;
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+  color: #666;
+}
+
+.toggle-handle {
+  position: absolute;
+  width: 50%;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 17.5px;
+  transition: 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-input:checked + .toggle-label .toggle-handle {
+  transform: translateX(100%);
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.toggle-input:checked + .toggle-label #private-text {
+  color: #fff;
+}
+
+.toggle-input:checked + .toggle-label #business-text {
+  color: #fff;
+}
+
+#username,
+#password,
+#company {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2 id="login-title">Login Privat</h2>
+        <div class="toggle-switch">
+            <input type="checkbox" id="toggle" class="toggle-input">
+            <label for="toggle" class="toggle-label">
+                <span class="toggle-text" id="private-text">Privat</span>
+                <span class="toggle-text" id="business-text">Geschäftlich</span>
+                <span class="toggle-handle"></span>
+            </label>
+        </div>
+        <form id="login-form">
+            <label for="username">Vorname</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="username">Nachname</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div id="company-field" style="display: none;">
+                <label for="company">Firma:</label>
+                <input type="text" id="company" name="company">
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
