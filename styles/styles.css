@@ -44,6 +44,10 @@ a {
   margin: 0 15px;
 }
 
+.nav-links a:hover {
+  color: rgb(0, 128, 123);
+}
+
 
 #add-box-button {
   background-color: black;
