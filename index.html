@@ -23,19 +23,62 @@
         <a href="unterseiten/kontakt.html">Kontakt</a>
         <a href="untersieten/impressum.html">Impressum</a>
       </div>
+      
 
       <button href="#" id="add-box-button">Firma anlegen</button>
     
-    <div class="dropdown">
+    <!--<div class="dropdown">
       <button class="dropbtn">&#9660; Kategorien</button>
       <div class="dropdown-content">
         <a href="#" data-category="schreiner">Schreiner</a>
         <a href="#" data-category="elektriker">Elektriker</a>
         <a href="#" data-category="klempner">Klempner</a>
         <a href="#" data-category="Test Kategorie">Test Kategorie</a>
-        <!-- Weitere Kategorien hier -->
-      </div>
+         (Weitere Kategorien hier) 
+      </div> -->
+      <div class="search-container">
+        <input type="text" class="search-input" id="search" placeholder="Suche...">
+        <div class="suggestions-box" id="suggestions">
+            <!-- Vorschläge werden hier dynamisch hinzugefügt -->
+        </div>
     </div>
+
+    <script>
+        const suggestions = ["Schreiner", "Elektriker", "Klempner"];
+        const searchInput = document.getElementById('search');
+        const suggestionsBox = document.getElementById('suggestions');
+
+        searchInput.addEventListener('click', () => {
+            // Vorschläge anzeigen, wenn auf die Suchleiste geklickt wird
+            showSuggestions();
+        });
+
+        function showSuggestions() {
+            suggestionsBox.innerHTML = '';
+            suggestions.forEach(item => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.classList.add('suggestion-item');
+                suggestionItem.textContent = item;
+                suggestionsBox.appendChild(suggestionItem);
+            });
+            suggestionsBox.style.display = 'block';
+        }
+
+        // Event-Listener für Klick auf Vorschläge
+        suggestionsBox.addEventListener('click', (e) => {
+            if (e.target.classList.contains('suggestion-item')) {
+                searchInput.value = e.target.textContent;
+                suggestionsBox.style.display = 'none';
+            }
+        });
+
+        // Ausblenden der Vorschläge, wenn außerhalb geklickt wird
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+                suggestionsBox.style.display = 'none';
+            }
+        });
+    </script>
   </nav>
   </header>
 
@@ -74,7 +117,7 @@
   </div>
   <div class="faq-item">
     <h3>Wie kann ich nach Handwerkern suchen?</h3>
-    <p>Sie können nach Handwerkern suchen, indem Sie entweder eine Kategorie im Dropdown-Menü auswählen oder den Suchbegriff in das Suchfeld eingeben und auf die Suchschaltfläche klicken.</p>
+    <p>Sie können nach Handwerkern suchen, indem sie den Suchbegriff in das Suchfeld eingeben und auf die Suchschaltfläche klicken.</p>
   </div>
   <!-- Weitere FAQ-Einträge hier -->
 </section>
